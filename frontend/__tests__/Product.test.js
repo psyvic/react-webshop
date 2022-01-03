@@ -1,5 +1,5 @@
 import { MockedProvider } from '@apollo/react-testing';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import Product from '../components/Product';
 import { fakeItem } from '../lib/testUtils';
 
