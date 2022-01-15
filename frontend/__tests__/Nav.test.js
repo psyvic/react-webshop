@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react';
 import { MockedProvider } from '@apollo/client/testing';
-import debounce from 'lodash.debounce';
 import Nav from '../components/Nav';
 import { CURRENT_USER_QUERY } from '../components/User';
 import { fakeUser, fakeCartItem } from '../lib/testUtils';
@@ -81,7 +80,7 @@ describe('<Nav/>', () => {
       </CartStateProvider>
     );
     await screen.findByText('Account');
-    debug();
+    // debug();
     expect(screen.getByText('3')).toBeInTheDocument();
   });
 });
